@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: hello-python
-        image: hello-python:latest
-        imagePullPolicy: Never
+        image: ghcr.io/drodriguezatfide/sample-flask:latest
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000
