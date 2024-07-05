@@ -28,7 +28,7 @@ def hello():
 
 
     try:
-        client = pulsar.Client('pulsar://localhost:6650')
+        client = pulsar.Client('pulsar://10.43.8.128:6650')
         topic = 'persistent://fidelizador/relay/test'
 
         producer = client.create_producer(topic)
@@ -42,7 +42,7 @@ def hello():
         app.logger.info("Error connecting to Pulsar")
         app.logger.error(str(e))
 
-    return "Hello from Python! 3"
+    return "Hello from Python! 4"
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
